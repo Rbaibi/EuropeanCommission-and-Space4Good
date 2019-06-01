@@ -1,6 +1,8 @@
 # European Commission and Space4Good Challenge
 2nd edition of the Hackathon for Peace, Justice and Security
 
+https://www.hackathonforgood.org
+
 ## AN ENERGY TRADE MARKETPLACE FOR LOCAL ENERGY COMMUNITIES   
 **Problem:**  In 2018, more than 50 million people in Europe were experiencing energy poverty, a situation where households are not able to adequately meet their energy needs (heating, lighting, cooling) at an affordable cost.
 
