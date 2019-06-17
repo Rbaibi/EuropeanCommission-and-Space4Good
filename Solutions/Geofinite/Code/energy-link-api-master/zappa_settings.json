@@ -1,0 +1,15 @@
+{
+    "dev": {
+        "api_key_required": false,
+        "app_function": "energy.zappa.app",
+        "aws_region": "eu-west-1",
+        "binary_support": false,
+        "cors": true,
+        "debug": true,
+        "keep_warm": false,
+        "memory_size": 128,
+        "profile_name": "geofinite",
+        "project_name": "energy-link-api",
+        "runtime": "python3.7"
+    }
+}

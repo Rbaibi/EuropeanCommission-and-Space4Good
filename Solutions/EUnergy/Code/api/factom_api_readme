@@ -1,0 +1,171 @@
+# Get simple info
+
+<?php
+
+$request = new HttpRequest();
+$request->setUrl('https://ephemeral.api.factom.com/v1/');
+$request->setMethod(HTTP_METH_GET);
+
+$request->setHeaders(array(
+  'Postman-Token' => 'd8b6aa74-c8fe-45e0-8fd6-a52f54ee7d0e',
+  'cache-control' => 'no-cache',
+  'app_key' => '2b9eee51f459412508c07cf853eb939f',
+  'app_id' => 'd01acae3'
+));
+
+try {
+  $response = $request->send();
+
+  echo $response->getBody();
+} catch (HttpException $ex) {
+  echo $ex;
+}
+
+
+## Create Chain
+<?php
+
+$request = new HttpRequest();
+$request->setUrl('https://ephemeral.api.factom.com/v1/chains');
+$request->setMethod(HTTP_METH_POST);
+
+$request->setHeaders(array(
+  'Postman-Token' => '8db4a8a7-9417-4059-8adf-a62f4b1a5842',
+  'cache-control' => 'no-cache',
+  'app_id' => 'd01acae3',
+  'Content-Type' => 'application/json',
+  'app_key' => '2b9eee51f459412508c07cf853eb939f'
+));
+
+$request->setBody('{"external_ids":["RW5lcmd5TWljcm9DcmVkaXQ="],"content":"QmxvY2tjaGFpbiBmb3IgTWljcm90cmFuc2FjdGlvbnMuIENhbXAgRXNzZW4sIDIwMTku"}');
+
+try {
+  $response = $request->send();
+
+  echo $response->getBody();
+} catch (HttpException $ex) {
+  echo $ex;
+}
+
+
+
+## Show existing transactions
+<?php
+
+$request = new HttpRequest();
+$request->setUrl('https://ephemeral.api.factom.com/v1/chains/086c905173fa90fa1809741f2a0febc0aeea0a058454167973036f04e590218a/entries');
+$request->setMethod(HTTP_METH_GET);
+
+$request->setHeaders(array(
+  'Postman-Token' => 'ce13449e-9422-4b2c-9571-2820cc189917',
+  'cache-control' => 'no-cache',
+  'app_key' => '2b9eee51f459412508c07cf853eb939f',
+  'app_id' => 'd01acae3'
+));
+
+try {
+  $response = $request->send();
+
+  echo $response->getBody();
+} catch (HttpException $ex) {
+  echo $ex;
+}
+
+
+## Create an entry
+
+<?php
+
+$request = new HttpRequest();
+$request->setUrl('https://ephemeral.api.factom.com/v1/chains/086c905173fa90fa1809741f2a0febc0aeea0a058454167973036f04e590218a/entries');
+$request->setMethod(HTTP_METH_POST);
+
+$request->setHeaders(array(
+  'Postman-Token' => '746ae812-7801-45b7-ba0f-f8e405d5c794',
+  'cache-control' => 'no-cache',
+  'app_key' => '2b9eee51f459412508c07cf853eb939f',
+  'app_id' => 'd01acae3',
+  'Content-Type' => 'application/json'
+));
+
+$request->setBody('{
+	"external_ids":["RW5lcmd5TWljcm9DcmVkaXRz"],
+	"content":"eydwaG9uZSc6Jys0OTAwMCcsJ3ZhbHVlJzonMTAwJywnY3VzdG9tZXJfaWQnOidrZGY5MzI0amQnfQ=="
+}');
+
+try {
+  $response = $request->send();
+
+  echo $response->getBody();
+} catch (HttpException $ex) {
+  echo $ex;
+}
+
+
+
+
+New chain ID: 086c905173fa90fa1809741f2a0febc0aeea0a058454167973036f04e590218a
+
+
+
+Our blockchain:
+{
+    "stage": "replicated",
+    "entry_hash": "d1aac05dfa6e0e83736e82137b0a7fd97f50e278ea78478f2ab72b897a2c1b84",
+    "chain_id": "086c905173fa90fa1809741f2a0febc0aeea0a058454167973036f04e590218a"
+}
+
+https://explorer.factom.com/chains/086c905173fa90fa1809741f2a0febc0aeea0a058454167973036f04e590218a
+
+
+Decoding and Encoding
+https://www.base64decode.org/
+
+{'phone':'+49000','value':'100','customer_id':'kdf9324jd'}
+
+
+Response from the created entery der Entery:
+Link: https://explorer.factom.com/chains/086c905173fa90fa1809741f2a0febc0aeea0a058454167973036f04e590218a/entries/867ee16ba79669142287d1adf27e50053371fad2a4c72b08e205f91226d820e9
+{
+    "stage": "replicated",
+    "entry_hash": "867ee16ba79669142287d1adf27e50053371fad2a4c72b08e205f91226d820e9"
+}
+
+https://explorer.factom.com/
+Login Data:andrey.bogomolov@AIndex.Ruhr
+Password: I&!2r5v9UztF
+
+
+
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => "https://ephemeral.api.factom.com/v1/chains/086c905173fa90fa1809741f2a0febc0aeea0a058454167973036f04e590218a/entries",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "POST",
+  CURLOPT_POSTFIELDS => "{\n\t\"external_ids\":[\"RW5lcmd5TWljcm9DcmVkaXRz\"],\n\t\"content\":\"eydwaG9uZSc6Jys0OTAwMCcsJ3ZhbHVlJzonMTAwJywnY3VzdG9tZXJfaWQnOidrZGY5MzI0amQnfQ==\"\n}",
+  CURLOPT_HTTPHEADER => array(
+    "Content-Type: application/json",
+    "Postman-Token: a9cfca5f-bb7a-4b43-8739-1bab974f8839",
+    "app_id: 014a84e7",
+    "app_key: e20f9985f1bbfecb7faa2d59cf83693a",
+    "cache-control: no-cache"
+  ),
+));
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+  echo "cURL Error #:" . $err;
+} else {
+  echo $response;
+}
