@@ -29,7 +29,7 @@
     "@nuxtjs/google-analytics": "^2.2.0",
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
-    "chart.js": "^2.8.0",
+    "chart.js": "^2.9.4",
     "chartjs-web-components": "^2.7.1",
     "express": "^4.16.4",
     "helmet": "^3.13.0",
