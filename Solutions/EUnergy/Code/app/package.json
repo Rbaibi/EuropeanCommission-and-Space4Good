@@ -36,7 +36,7 @@
     "leaflet": "^1.5.1",
     "moment": "^2.24.0",
     "mongoose": "^5.5.4",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^3.1.1",
     "nuxt": "^2.6.2",
     "serverless-http": "^1.10.1",
     "shake.js": "^1.2.2",
