@@ -31,7 +31,7 @@
     "body-parser": "^1.18.3",
     "chart.js": "^2.8.0",
     "chartjs-web-components": "^2.7.1",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "helmet": "^3.13.0",
     "leaflet": "^1.5.1",
     "moment": "^2.24.0",
