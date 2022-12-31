@@ -51,7 +51,7 @@
   "devDependencies": {
     "serverless-apigw-binary": "^0.4.4",
     "serverless-domain-manager": "^2.6.13",
-    "serverless-offline": "^3.25.7"
+    "serverless-offline": "^3.33.0"
   },
   "repository": {
     "type": "git",
